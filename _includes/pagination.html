@@ -1,0 +1,40 @@
+<ul class="back-pagination">
+    {% if paginator.total_pages > 1 %}
+        {% if paginator.previous_page %}
+            <li class="back-next">
+                <a href="{{ site.url }}{{ site.baseurl }}{{ paginator.previous_page_path }}"
+                >Prev<i class="arrow_carrot-left"></i
+                ></a>
+            </li>
+        {% endif %}
+        {% if paginator.next_page %}
+        {% assign next_two = paginator.next_page | plus: 1 %}
+        {% if next_two <= paginator.total_pages %}
+            <li>
+                <a href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.next_page | plus: 1 }}">
+                    {{ paginator.next_page | plus: 1 }}
+                </a>
+            </li>
+        {% endif %}
+        {% assign next_three = paginator.next_page | plus: 2 %}
+        {% if next_three <= paginator.total_pages %}
+            <li>
+                <a href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.next_page | plus: 2 }}">
+                    {{ paginator.next_page | plus: 2 }}
+                </a>
+            </li>
+        {% endif %}
+        {% assign next_four = paginator.next_page | plus: 3 %}
+        {% if next_four <= paginator.total_pages %}
+            <li>
+                <a href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.next_page | plus: 3 }}">
+                    {{ paginator.next_page | plus: 3 }}
+                </a>
+            </li>
+        {% endif %}
+            <li class="back-next">
+                <a href="{{ site.url }}{{ site.baseurl }}{{ paginator.next_page_path }}">Next<i class="arrow_carrot-right"></i></a>
+            </li>
+        {% endif %}
+    {% endif %}
+</ul>

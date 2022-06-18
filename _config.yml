@@ -1,0 +1,23 @@
+plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
+
+title: Mega Dash | Programming Cookbook
+description: >
+  Mega Dash is a programming cookbook with interactive examples
+  and references of Flutter, Dart, Git as well as other various
+  programming languages and tools.
+
+url: "https://megadash.dev"
+baseurl: ""
+permalink: /:categories/:title/
+
+paginate: 8
+paginate_path: /page/:num
+defaults:
+  - scope:
+      path: "page"
+    values:
+      sitemap: false
+      robots: noindex
+  
+exclude:
+  - node_modules/

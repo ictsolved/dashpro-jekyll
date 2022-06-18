@@ -1,0 +1,46 @@
+<div class="back-blog-related">
+  <div class="container">
+    <div class="back-title back-small-title">
+      <h2>Related Posts</h2>
+    </div>
+    <ul id="back-blog-slider" class="owl-carousel owl-theme">
+      {% for post in site.posts %}
+      {% if post.url != page.url %}
+      {% for tag in post.category %}
+      {% if page.category contains tag %}
+      <li class="item">
+        <div class="back-inner">
+        {% if post.img %}
+          <div class="back-blog-image">
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+              <img
+                src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ post.img }}"
+                alt="{{ post.title }}"
+            /></a>
+          </div>
+        {% endif %}
+          <div class="back-blog-content">
+            <em class="back-blog-date">{{ post.date | date_to_string }}</em>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+              <h3>{{ post.title }}</h3></a
+            >
+            <ul>
+              <li class="back-author">
+                <span
+                  ><img
+                    src="{{ site.url }}{{ site.baseurl }}/assets/images/author/sarad-gajurel.jpg"
+                    alt="Sarad Gajurel"
+                /></span>
+                <a href="#">Sarad Gajurel</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

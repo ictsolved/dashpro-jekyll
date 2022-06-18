@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+{% include breadcrumbs.html %}
+
+<div class="back__blog__area back-blog-page back-blog-page-single pt-70 pb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-single-inner">
+          <div class="blog-content">
+            <div class="blog-image">
+              {% if page.img %}
+              <img
+                src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.img }}"
+                alt="{{ page.title }}"
+              />
+              {% endif %}
+            </div>
+
+            {{ content }}
+
+            <div class="blog-tags">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <ul class="mata-tags">
+                    <li class="tags">Tags:</li>
+                    {% for tag in page.category %}
+                    <li><a href="#">{{ tag }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% include post-share.html %}
+              </div>
+            </div>
+
+            {% include post-author.html %}
+
+            <div class="single-nav">
+              <div class="back-prev">
+                {% if page.previous %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
+                  <i class="fa-solid fa-arrow-right"></i> Preovious Post
+                  <em>{{ page.previous.title }}</em></a
+                >
+                {% endif %}
+              </div>
+              <div class="back-next">
+                {% if page.next %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
+                  Next Post <i class="fa-solid fa-arrow-right"></i>
+                  <em>{{ page.next.title }}</em></a
+                >
+                {% endif %}
+              </div>
+            </div>
+
+            {% include post-related.html %}
+          </div>
+        </div>
+      </div>
+      {% include sidebar.html %}
+    </div>
+  </div>
+</div>

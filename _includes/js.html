@@ -1,0 +1,24 @@
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/owl.carousel.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/wow.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/back-menus.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/plugins.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
+{% if page.dartpad %}
+<script src="https://dartpad.dev/inject_embed.dart.js" defer></script>
+{% endif %}
+<!-- {% if page.highlight %}
+<script src="https://unpkg.com/shiki"></script>
+<script>
+  shiki
+    .getHighlighter({
+      theme: 'dark-plus'
+    })
+    .then(highlighter => {
+      const code = highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' })
+      document.getElementById('output').innerHTML = code
+    })
+</script>
+{% endif %} -->

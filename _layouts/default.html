@@ -1,0 +1,19 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+    <!-- {% include preloader.html %} -->
+    {% include header.html %}
+    <div class="back-wrapper">
+        {{ content }}
+    </div>
+    {% include footer.html %}
+    {% include scroll-to-top.html %}
+    {% include js.html %}
+</body>
+
+</html>

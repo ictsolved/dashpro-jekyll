@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="back__blog__area back-blog-page pt-70 pb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-grid">
+          {% for post in paginator.posts %}
+          <div class="single-blog">
+            <div class="inner-blog">
+              <div class="blog-img">
+                {% if post.img %}
+                <img
+                  src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ post.img }}"
+                  alt="{{ post.title }}"
+                />
+                {% endif %}
+              </div>
+              <div class="blog-content">
+                <ul class="top-part">
+                  <li>
+                    <img
+                      src="{{ site.url }}{{ site.baseurl }}/assets/images/author/sarad-gajurel.jpg"
+                      alt="{{ post.author }}"
+                    />
+                    {{ post.author }}
+                  </li>
+                  <li class="date-part">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-clock"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    {{ post.date | date_to_string }}
+                  </li>
+                </ul>
+
+                <h3 class="blog-title">
+                  <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"
+                    >{{ post.title }}</a
+                  >
+                </h3>
+                <p class="blog-desc">{{ post.description }}</p>
+                <a
+                  href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"
+                  class="back-btn-border"
+                  >Read More <i class="arrow_right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% include pagination.html %}
+      </div>
+    </div>
+  </div>
+</div>

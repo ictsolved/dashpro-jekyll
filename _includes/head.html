@@ -1,0 +1,142 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+    rel="apple-touch-icon"
+    href="{{ site.url }}{{ site.baseurl }}/assets/images/fav.png"
+  />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="{{ site.url }}{{ site.baseurl }}/assets/images/fav.png"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/bootstrap.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/all.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/rounded.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/back-menus.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/animate.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/owl.carousel.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/magnific-popup.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/back-spacing.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.url }}{{ site.baseurl }}/assets/css/responsive.css"
+  />
+
+  <title>
+    {% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}
+  </title>
+
+  <meta
+    name="description"
+    content="{% if page.description %}{{ page.description | strip_html | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160  }}{% endif %}"
+  />
+
+  <link rel="canonical" href="{{ site.url}}{{site.baseurl}}{{page.url}}" />
+
+  <!-- facebook -->
+  <meta property="og:locale" content="en_US" />
+  <meta
+    property="og:title"
+    content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+  />
+  <meta
+    property="og:url"
+    content="{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+  />
+
+  <meta
+    property="og:description"
+    content="{% if page.description %}{{ page.description | strip_html | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160  }}{% endif %}"
+  />
+
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta
+    property="og:image"
+    content="{{site.url}}{{site.baseurl}}/assets/images/banner.png"
+  />
+  <!-- <meta property="fb:app_id" content="170214657616998" /> -->
+  <!-- facebook -->
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta
+    name="twitter:title"
+    content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+  />
+
+  <meta
+    name="twitter:description"
+    content="{% if page.description %}{{ page.description | strip_html | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160  }}{% endif %}"
+  />
+
+  <meta name="twitter:creator" content="@SaradGajurel" />
+  <meta
+    name="twitter:image"
+    content="{{site.url}}{{site.baseurl}}/assets/images/banner.png"
+  />
+  <!-- twitter -->
+
+  <!-- Google Analytics -->
+  <!-- <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84674621-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+</head>
