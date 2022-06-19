@@ -5,7 +5,7 @@ description: Want to make a call, send SMS or an email, or open a website from F
 category:
   - Flutter
   - Blog
-highlight: true
+img: "assets/images/blog/Flutter URL Launcher.png"
 ---
 
 Want to make a call, send SMS or an email, or open a website from Flutter application? This recipe will demonstrate how to use those functionalities in Flutter.

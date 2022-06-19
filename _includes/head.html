@@ -107,7 +107,7 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta
     property="og:image"
-    content="{% if page.img %}{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.img }}{% else %}{{site.url}}{{site.baseurl}}/assets/images/mega-dash-cover.jpg{% endif %}"
+    content="{% if page.img %}{{ site.url }}{{ site.baseurl }}/{{ page.img }}{% else %}{{site.url}}{{site.baseurl}}/assets/images/mega-dash-cover.jpg{% endif %}"
   />
   <!-- facebook -->
 
@@ -126,10 +126,11 @@
   <meta name="twitter:creator" content="@SaradGajurel" />
   <meta
     name="twitter:image"
-    content="{% if page.img %}{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.img }}{% else %}{{site.url}}{{site.baseurl}}/assets/images/mega-dash-cover.jpg{% endif %}"
+    content="{% if page.img %}{{ site.url }}{{ site.baseurl }}/{{ page.img }}{% else %}{{site.url}}{{site.baseurl}}/assets/images/mega-dash-cover.jpg{% endif %}"
   />
   <!-- twitter -->
 
+  {% if jekyll.environment == "production" %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JG1ME5G3W0"></script>
   <script>
@@ -139,5 +140,6 @@
 
     gtag('config', 'G-JG1ME5G3W0');
   </script>
-  
+  {% endif %}
+
 </head>

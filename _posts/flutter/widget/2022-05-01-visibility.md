@@ -5,6 +5,7 @@ description: In this recipe, we are going to discuss about a handy widget of Flu
 category:
   - Flutter
   - Widget
+img: "assets/images/blog/Flutter Visibility.png"
 dartpad: true
 ---
 
