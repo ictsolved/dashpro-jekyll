@@ -24,7 +24,8 @@
 21. Back Footer CSS Here
 22. Preloader CSS Here
 23. ScrollUp CSS Here
-24. Back Dark Mode CSS Here 
+24. Back Dark Mode CSS Here
+25. Custom CSS Here
 
 
 --------------------------------------------------------*/
@@ -4316,4 +4317,82 @@ html.back-dark body .back-contact-page .blog-form form textarea,
 html.back-dark body .back-blog-page-single .blog-single-inner .blog-content .blog-form form input,
 html.back-dark body .back-blog-page-single .blog-single-inner .blog-content .blog-form form textarea {
   background: #222;
+}
+/*****************************************************
+    25. Custom CSS Here
+****************************/
+pre {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-radius: .375rem;
+  padding: 12px 16px;
+}
+
+pre code .line {
+  min-height: 1rem;
+}
+
+code {
+  font-weight: 500;
+}
+
+html.back-dark code {
+  color: #f8f8f8;
+}
+
+html.back-dark .back-blog-page-single .blog-single-inner .blog-content blockquote {
+  background: #0D0D0D;
+}
+
+html.back-dark .back-blog-page-single .blog-single-inner .blog-content .post-author {
+  background: #0D0D0D;
+}
+
+html.back-dark .back-blog-page-single .blog-single-inner .blog-content .post-author .info .name {
+  color: #F8F8F8;
+}
+
+html.back-dark .back-blog-page-single .blog-single-inner .blog-content .post-author p {
+  color: #b7b6a6;
+}
+
+html.back-dark #back__preloader {
+  background: #0A0A0A;
+}
+
+table {
+  border-collapse: collapse;
+  border-color: #e7e5e4;
+  text-indent: 0;
+  font-size: .875em;
+  line-height: 1.7;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  table-layout: auto;
+  text-align: left;
+  width: 100%;
+}
+
+table thead {
+  border-bottom-width: 1px;
+}
+
+table thead tr th {
+  padding: 16px 8px 16px 8px;
+}
+
+tbody tr {
+  border-bottom: 1px solid;
+}
+
+table tbody tr td {
+  padding: 16px 8px 16px 8px;
+}
+
+tbody tr:last-child {
+  border-bottom-width: 0px;
+}
+
+html.back-dark table {
+  color: #f8f8f8;
 }
