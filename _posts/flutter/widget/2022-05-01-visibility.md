@@ -47,15 +47,11 @@ const Visibility({
 
 > A widget that lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent.
 
-<alert>
-It is recommended to maintain the state only when it cannot be recreated on demand. It is potentially expensive to keep the state of subtree because the resources allocated by the objects are not released from the memory. 
-</alert>
+> It is recommended to maintain the state only when it cannot be recreated on demand. It is potentially expensive to keep the state of subtree because the resources allocated by the objects are not released from the memory. 
 
 `maintainAnimation`: Determines whether the animations within the `child` subtree should be maintained when `child` is not `visible`. It requires `maintainState` to be set too.
 
-<alert>
-It is even more expensive to keep the animations active when the widget is not visible.
-</alert>
+> It is even more expensive to keep the animations active when the widget is not visible.
 
 `maintainSize`: It determines whether to maintain the space for `child` when it not visible. `maintinState` and `maintainAnimation` must also be set in order to set this.
 
@@ -63,9 +59,7 @@ It is even more expensive to keep the animations active when the widget is not v
 
 `maintainInteractivity`: Allows the widget to be interactive, i.e. receive touch events when it is not `visible`. To set this property, `maintainSize` must also be set.
 
-<alert>
-The values of all maintain flags should be same in order to operate correctly. The state will be lost if the value of any of these flags get changed.
-</alert>
+> The values of all maintain flags should be same in order to operate correctly. The state will be lost if the value of any of these flags get changed.
 
 The following example demonstrates the use of the `Visibility` widget. Feel free to experiment with the values and code.
 

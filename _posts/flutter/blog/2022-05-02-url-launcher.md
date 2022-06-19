@@ -10,7 +10,7 @@ highlight: true
 
 Want to make a call, send SMS or an email, or open a website from Flutter application? This recipe will demonstrate how to use those functionalities in Flutter.
 
-There is an official plugin from the Flutter team called [`url_launcher`](https://pub.dev/packages/url_launcher)to perform these actions. It supports all the platforms.
+There is an official plugin from the Flutter team called [`url_launcher`](https://pub.dev/packages/url_launcher) to perform these actions. It supports all the platforms.
 
 | Platform  | Android | iOS  | Linux | macOS  | Web | Windows     |
 | --------- | ------- | ---- | ----- | ------ | --- | ----------- |
@@ -48,9 +48,7 @@ To launch the URL schemes, we need to add them in the `Info.plist` file as shown
 </array>
 ```
 
-<alert>
-The above example includes multiple URL schemes. Make sure to add only the scheme required by your application.
-</alert>
+> The above example includes multiple URL schemes. Make sure to add only the scheme required by your application.
 
 ### Android
 

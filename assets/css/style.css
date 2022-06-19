@@ -4333,10 +4333,25 @@ pre code .line {
 }
 
 code {
-  font-weight: 500;
+  background: #F9F9F9;
+  padding: 3px 6px;
 }
 
 html.back-dark code {
+  background: #161B2B;
+}
+
+html.back-dark pre code {
+  background: transparent;
+}
+
+pre code {
+  background: transparent;
+  font-weight: 500;
+  padding: 0px;
+}
+
+html.back-dark pre code {
   color: #f8f8f8;
 }
 
@@ -4378,7 +4393,7 @@ table thead {
 }
 
 table thead tr th {
-  padding: 16px 8px 16px 8px;
+  padding: 16px 8px;
 }
 
 tbody tr {
@@ -4386,7 +4401,7 @@ tbody tr {
 }
 
 table tbody tr td {
-  padding: 16px 8px 16px 8px;
+  padding: 16px 8px;
 }
 
 tbody tr:last-child {
