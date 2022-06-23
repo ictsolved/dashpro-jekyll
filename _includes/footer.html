@@ -21,9 +21,11 @@
         <div class="col-lg-3 md-mb-30">
           <div class="footer-widget footer-widget-2">
             <h3 class="footer-title">Category</h3>
-            <div class="footer-menu">
+            <div class="footer-tag">
               <ul>
-                <!-- <li><a href="about.html">Technology</a></li> -->
+                {% for category in site.categories %}
+                <li><a href="#">{{ category | first }}</a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -33,23 +35,71 @@
             <h3 class="footer-title">Quick links</h3>
             <div class="footer-menu">
               <ul>
-                <!-- <li><a href="#">Browse Library</a></li> -->
+                <li><a href="{{ site.url }}{{ site.baseurl }}">Home</a></li>
+                <li>
+                  <a href="{{ site.url }}{{ site.baseurl }}/about/">About</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}{{ site.baseurl }}/contact/"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ site.url }}{{ site.baseurl }}/privacy-policy/"
+                    >Privacy Policy</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
         </div>
+
+        <!-- Begin Mailchimp Signup Form -->
         <div class="col-lg-3">
           <div class="footer-widget footer-widget-3">
             <h3 class="footer-title">Newsletter</h3>
             <h5 class="footer-subtitle">
               Subscribe to our mailing list to <br />get the new updates!
             </h5>
-            <form class="back-newsletter">
-              <input type="email" placeholder="Enter Your Email" />
-              <button type="submit">Subscribe</button>
+            <form
+              action="https://dev.us14.list-manage.com/subscribe/post?u=c35b05308d09bbf6753e10b9f&amp;id=58b676d3a6"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="back-newsletter"
+              target="_blank"
+            >
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                placeholder="Enter Your Email"
+                id="mce-EMAIL"
+                required
+              />
+
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px" aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_c35b05308d09bbf6753e10b9f_58b676d3a6"
+                  tabindex="-1"
+                  value=""
+                />
+              </div>
+              <!-- End fake field -->
+              <button
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+              >
+                Subscribe
+              </button>
             </form>
           </div>
         </div>
+        <!--End mc_embed_signup-->
       </div>
     </div>
   </div>
@@ -60,7 +110,7 @@
       <div class="back-copy-right">
         <ul>
           <li>
-            <a href="{{ site.url }}{{ site.baseurl }}"
+            <a href="{{ site.url }}{{ site.baseurl }}/privacy-policy/"
               >Privacy Policy</a
             >
           </li>

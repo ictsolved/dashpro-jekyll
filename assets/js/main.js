@@ -219,7 +219,7 @@
     // Team Slider Part
     if ($('.team-slider').length) {
         $('.team-slider').owlCarousel({
-            loop:true,
+            loop:false,
             items:4,
             margin:30,
             autoplay:false,
