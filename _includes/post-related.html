@@ -6,15 +6,15 @@
     <ul id="back-blog-slider" class="owl-carousel owl-theme">
       {% for post in site.posts %}
       {% if post.url != page.url %}
-      {% for tag in post.category %}
-      {% if page.category contains tag %}
+      {% for tag in post.categories %}
+      {% if page.categories contains tag %}
       <li class="item">
         <div class="back-inner">
         {% if post.img %}
           <div class="back-blog-image">
             <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
               <img
-                src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ post.img }}"
+                src="{{ site.url }}{{ site.baseurl }}/{{ post.img }}"
                 alt="{{ post.title }}"
             /></a>
           </div>

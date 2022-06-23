@@ -2,10 +2,11 @@
 layout: post
 title: Flutter Visibility Widget Explained with Example
 description: In this recipe, we are going to discuss about a handy widget of Flutter called Visibility. It helps to display a widget conditionally on the basis of it's boolean property.
-category:
+categories:
   - Flutter
   - Widget
 img: "assets/images/blog/Flutter Visibility.png"
+permalink: flutter/widget/visibility/
 dartpad: true
 ---
 

@@ -3746,7 +3746,6 @@ body.nav-expanded .back-offcanvas {
     20. Error Page CSS Here 
 ****************************/
 .back-error-page {
-  background: url(../images/error/bg.html) no-repeat center top;
   background-size: cover;
 }
 .back-error-page h1 {
@@ -4410,4 +4409,9 @@ tbody tr:last-child {
 
 html.back-dark table {
   color: #f8f8f8;
+}
+
+.latest-post {
+  max-width: 100% !important;
+  padding-top: 4px;
 }

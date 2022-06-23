@@ -1,15 +1,10 @@
 <div class="back-title back-small-title pt-50">
-  <h2>Tags</h2>
+  <h2>Categories</h2>
 </div>
 <div class="widget widget-tags">
   <ul class="tags">
-    <li><a href="#">Education</a></li>
-    <li><a href="#">SEO Marketing</a></li>
-    <li><a href="#">Business</a></li>
-    <li><a href="#">Solutions</a></li>
-    <li><a href="#">UX</a></li>
-    <li><a href="#">Case Study</a></li>
-    <li><a href="#">Creative</a></li>
-    <li><a href="#">Insights</a></li>
+    {% for tag in site.categories %}
+    <li><a href="#">{{ tag | first }}</a></li>
+    {% endfor %}
   </ul>
 </div>

@@ -12,10 +12,12 @@ layout: default
             <div class="inner-blog">
               <div class="blog-img">
                 {% if post.img %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
                 <img
                   src="{{ site.url }}{{ site.baseurl }}/{{ post.img }}"
                   alt="{{ post.title }}"
                 />
+                </a>
                 {% endif %}
               </div>
               <div class="blog-content">

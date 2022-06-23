@@ -252,7 +252,7 @@
     // Client Slider Part
     if ($('#back-blog-slider').length) {
         $('#back-blog-slider').owlCarousel({
-            loop:true,
+            loop:$('.back-blog-content').length > 2 ? true : false,
             items:3,
             margin:20,
             autoplay:false,

@@ -1,69 +1,28 @@
 <div class="back-title back-small-title pt-30">
-  <h2>Latest News</h2>
+  <h2>Latest Posts</h2>
 </div>
 <ul class="back-hero-bottom">
-  <li>
-    <div class="image-areas">
-      <a href="#"
-        ><img
-          src="{{ site.url }}{{ site.baseurl }}/assets/images/dont/1.jpg"
-          alt="image"
-      /></a>
-    </div>
-    <div class="back-btm-content">
-      <a href="#" class="back-cates">Politics</a>
-      <h3><a href="#">Time can never stop for anyone</a></h3>
-      <ul>
-        <li class="back-date">by <a href="#">Jon Deo </a></li>
-      </ul>
-    </div>
-  </li>
-  <li>
-    <div class="image-areas">
-      <a href="#"
-        ><img
-          src="{{ site.url }}{{ site.baseurl }}/assets/images/dont/2.jpg"
-          alt="image"
-      /></a>
-    </div>
-    <div class="back-btm-content">
-      <a href="#" class="back-cates">Music</a>
-      <h3><a href="#">Everyone loves to listen to music</a></h3>
-      <ul>
-        <li class="back-date">by <a href="#">Jon Deo </a></li>
-      </ul>
+  {% for post in site.posts | limit: 3 %} {% if post.url != page.url %}
+  <li class="item">
+    <div class="back-inner">
+      {% if post.img %}
+      <div class="back-blog-image">
+        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+          <img
+            src="{{ site.url }}{{ site.baseurl }}/{{ post.img }}"
+            alt="{{ post.title }}"
+        /></a>
+      </div>
+      {% endif %}
+      <div class="back-btm-content latest-post">
+        <h3>
+          <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}</a
+          >
+        </h3>
+        <ul></ul>
+      </div>
     </div>
   </li>
-  <li>
-    <div class="image-areas">
-      <a href="#"
-        ><img
-          src="{{ site.url }}{{ site.baseurl }}/assets/images/dont/3.jpg"
-          alt="image"
-      /></a>
-    </div>
-    <div class="back-btm-content">
-      <a href="#" class="back-cates">Lifestyle</a>
-      <h3><a href="#">10 easy habits to make your life</a></h3>
-      <ul>
-        <li class="back-date">by <a href="#">Jon Deo </a></li>
-      </ul>
-    </div>
-  </li>
-  <li>
-    <div class="image-areas">
-      <a href="#"
-        ><img
-          src="{{ site.url }}{{ site.baseurl }}/assets/images/dont/4.jpg"
-          alt="image"
-      /></a>
-    </div>
-    <div class="back-btm-content">
-      <a href="#" class="back-cates">Travel</a>
-      <h3><a href="#">World tranding best 10 website</a></h3>
-      <ul>
-        <li class="back-date">by <a href="#">Jon Deo </a></li>
-      </ul>
-    </div>
-  </li>
+  {% endif %} {% endfor %}
 </ul>
