@@ -6,24 +6,45 @@
 <script src="{{ site.url }}{{ site.baseurl }}/assets/js/back-menus.js"></script>
 <script src="{{ site.url }}{{ site.baseurl }}/assets/js/plugins.js"></script>
 <script src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/shiki.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/shiki/dist/index.iife.js"></script>
 <script>
   let codeblocks = document.getElementsByTagName("pre");
   if (codeblocks.length > 0) {
+    let shl = shiki.getHighlighter({
+      theme: "dracula",
+      langs: [
+        {
+          id: "dart",
+          scopeName: "source.dart",
+          path: "/languages/dart.tmLanguage.json",
+        },
+        {
+          id: "bash",
+          scopeName: "source.shell",
+          path: "/languages/shellscript.tmLanguage.json",
+        },
+        {
+          id: "yaml",
+          scopeName: "source.yaml",
+          path: "/languages/yaml.tmLanguage.json",
+        },
+        {
+          id: "xml",
+          scopeName: "text.xml",
+          path: "/languages/xml.tmLanguage.json",
+        }
+      ],
+    });
     for (let index = 0; index < codeblocks.length; index++) {
       const element = codeblocks[index];
-      shiki
-        .getHighlighter({
-          theme: "dracula",
-        })
-        .then((highlighter) => {
-          if (!element.firstChild.className.includes("dartpad")) {
-            const lang = element.firstChild.className.split("-")[1];
-            const code = element.firstChild.innerText;
-            const highlighted = highlighter.codeToHtml(code, { lang: lang });
-            element.outerHTML = highlighted;
-          }
-        });
+      shl.then((highlighter) => {
+        if (!element.firstChild.className.includes("dartpad")) {
+          const lang = element.firstChild.className.split("-")[1];
+          const code = element.firstChild.innerText;
+          const highlighted = highlighter.codeToHtml(code, { lang: lang });
+          element.outerHTML = highlighted;
+        }
+      });
     }
   }
 </script>
