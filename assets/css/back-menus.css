@@ -272,5 +272,37 @@ body.back-one-page .back-menus > li > a {
     .back-menus > li > ul.sub-menu > li ul.sub-menu > li ul.sub-menu {
         position: static;
     }
-} 
- 
+}
+
+/*--------------------------------------
+	Custom Responsive CSS
+--------------------------------------*/
+
+@media screen and (max-width: 991px) {
+    html.back-dark .back-menus li {
+        background: #000;
+        color: #fff !important;
+    }
+    html.back-dark .back-menus .has-sub .arrow{        
+        background: #000;        
+        border-left: 1px solid #161B2B;                   
+        border-bottom: 1px solid #161B2B;                   
+    }
+    html.back-dark .back-menus > li {
+        border-bottom: 1px solid #0D0D0D;       
+    }
+    html.back-dark .back-menus > li ul.sub-menu > li{
+        border-top: 1px solid #0D0D0D;       
+    }    
+    html.back-dark .back-menus li a {
+        color: #fff !important;
+    }
+    html.back-dark .back-menus li a:hover {
+        background: #161B2B !important;
+        color: #fff !important;
+    }
+    html.back-dark .back-menus .has-sub > .arrow:after{
+        border-bottom: 0px solid #fff !important;
+        border-top: 10px solid #fff !important;
+    }
+}
