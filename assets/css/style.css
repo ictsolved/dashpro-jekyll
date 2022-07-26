@@ -4415,3 +4415,11 @@ html.back-dark table {
   max-width: 100% !important;
   padding-top: 4px;
 }
+
+.breadcrumbs-title {
+  line-height: 1.3 !important;
+}
+
+.blog-title a {
+  line-height: 1.3;
+}
